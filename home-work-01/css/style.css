@@ -1,0 +1,54 @@
+/* Цвет основного текста #000000 */
+/* Цвет вторичного текста rgba(0, 0, 0, 0.8) */
+/* Белый #FFFFFF */
+/* Акцент #18A0FB */
+/* Вторичный цвет фона #F5F5F5 */
+
+:root {
+    --primary-text-color: rgba(0, 0, 0, 0.8);
+    --title-text-color: #000000;
+    --accent-color: #18a0fb;
+    --primary-bg-color: #ffffff;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--title-text-color);
+}
+
+.list,
+.list li a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.button.primary {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+}
+.button.primary:hover {
+    color: var(--accent-color);
+    background-color: var(--primary-bg-color);
+}
+
+.button.secondary {
+    color: var(--accent-color);
+    background-color: var(--primary-bg-color);
+}
+.button.secondary:hover {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+}
+
+.button.logo {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+}
+
+.container.header {
+    background-color: var(--primary-bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
