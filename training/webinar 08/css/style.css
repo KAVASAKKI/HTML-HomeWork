@@ -1,0 +1,96 @@
+/* Utilities */
+* {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+/* general */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: block;
+
+  margin: 10px;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  fill: gray;
+  background-color: white;
+}
+
+.button-icon {
+  width: 44px;
+  height: 44px;
+}
+
+/* facebook */
+.button.facebook {
+  border-radius: 4px;
+}
+
+.button.facebook:hover {
+  fill: #3b5998;
+}
+
+/* telegram */
+.button.telegram:hover {
+  fill: #0088cc;
+}
+
+/* twitter */
+.button.twitter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: gray;
+  color: white;
+}
+
+.button-icon.twitter {
+  fill: currentColor;
+
+  width: 20px;
+  height: 16.25px;
+}
+
+.button.twitter:hover {
+  background-color: rgba(33, 150, 243, 1);
+}
+
+/* steam */
+.button.steam {
+  border-radius: 0%;
+}
+
+.button.steam:hover {
+  fill: black;
+}
+
+/* github */
+.button.github {
+  border-radius: 0%;
+}
+
+.button.github:hover {
+  fill: darkorchid;
+}
