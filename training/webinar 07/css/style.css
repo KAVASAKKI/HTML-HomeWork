@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 1200px;
+
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: solid 1px teal;
+}
+
+.container .item {
+  height: 190px;
+  width: calc(50% - 20px);
+
+  margin: 10px;
+
+  border-radius: 4px;
+}
+
+/* lion */
+.item:nth-child(1) {
+  background: mediumseagreen;
+
+  background-image: url(../images/lion.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+/* dog */
+.item:nth-child(2) {
+  background: rebeccapurple;
+
+  background-image: url(../images/cat.png);
+  background-repeat: repeat-y;
+  background-position: left;
+}
+
+/* cat */
+.item:nth-child(3) {
+  background: tomato;
+
+  background-image: url(../images/dog.png);
+  background-repeat: repeat-y;
+  background-position: right;
+}
+
+/* bee */
+.item:nth-child(4) {
+  background: aqua;
+
+  background-image: url(../images/bee.png);
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+/* Link */
+.link {
+  display: inline-flex;
+
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 15%;
+
+  padding: 10px 20px;
+  margin-bottom: 10px;
+
+  background-color: brown;
+  color: white;
+
+  border-radius: 4px;
+
+  transition: 0.3s;
+}
+
+.link:hover,
+.link:focus {
+  background-color: crimson;
+}
+
+.link::before {
+  width: 20px;
+  height: 20px;
+
+  margin-right: 10px;
+
+  background-image: url(../images/bee.png);
+  background-size: contain;
+  content: '';
+}
