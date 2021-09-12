@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home-work-04</title>
+    <title>home-work-05</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -38,13 +38,26 @@
         </nav>
 
         <ul class="contact-nav">
-          <li class="item mail">
-            <a class="link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
+          <li class="item">
+            <a class="link" href="mailto:info@devstudio.com">
+              <svg class="icon mail">
+                <use
+                  href="./images/other-icons/sprite-icons.svg#icon-mail"
+                ></use>
+              </svg>
+
+              <p>info@devstudio.com</p>
+            </a>
           </li>
-          <li class="item phone">
-            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+          <li class="item">
+            <a class="link" href="tel:+380961111111">
+              <svg class="icon phone">
+                <use
+                  href="./images/other-icons/sprite-icons.svg#icon-phone"
+                ></use>
+              </svg>
+              <p>+38 096 111 11 11</p>
+            </a>
           </li>
         </ul>
       </div>
@@ -57,7 +70,12 @@
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br />
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
-          <a class="link" href="">Заказать услугу</a>
+          <button class="link" data-open-modal>Заказать услугу</button>
+        </div>
+        <div class="backdrop is-hidden" data-backdrop>
+          <div class="modal">
+            <button class="close-button" data-close-modal>x</button>
+          </div>
         </div>
       </section>
 
@@ -101,6 +119,9 @@
               alt="Чел с руками на клавиатуре"
               width="370"
             />
+            <div class="overlay">
+              <h2 class="subtitle1">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h2>
+            </div>
           </li>
           <li class="item">
             <img
@@ -108,6 +129,9 @@
               alt="Чел в руках держит телефон"
               width="370"
             />
+            <div class="overlay">
+              <h2 class="subtitle1">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h2>
+            </div>
           </li>
           <li class="item">
             <img
@@ -115,6 +139,9 @@
               alt="Чел в руках держит планшет"
               width="370"
             />
+            <div class="overlay">
+              <h2 class="subtitle1">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h2>
+            </div>
           </li>
         </ul>
       </section>
@@ -314,5 +341,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./JS/open-modal.js"></script>
   </body>
 </html>
