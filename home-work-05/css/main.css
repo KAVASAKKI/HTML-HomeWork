@@ -553,7 +553,7 @@ body {
   transform: scaleX(1);
 }
 
-/* Modal */
+/* Backdrop */
 .backdrop {
   position: fixed;
   display: flex;
@@ -570,8 +570,17 @@ body {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  transform: scale(1);
+  transition: opacity 300ms ease-in-out;
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Modal */
 .modal {
   position: relative;
   width: 528px;
@@ -582,11 +591,13 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+.backdrop.is-hidden .modal {
+  transform: scale(0.9);
 }
 
 /* Close modal btn */
@@ -599,6 +610,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
+
 .close-button:hover {
   cursor: pointer;
 }
