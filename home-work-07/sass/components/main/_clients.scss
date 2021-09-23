@@ -1,0 +1,35 @@
+/* Cients */
+.clients {
+	&__title {
+		text-align: center;
+
+		margin-top: 94px;
+		margin-bottom: 50px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+
+		margin-bottom: 94px;
+	}
+
+	&__item:hover &__icon {
+		border-color: #2196f3;
+		fill: #2196f3;
+	}
+
+	&__icon {
+		display: block;
+
+		width: 170px;
+		height: 92px;
+
+		border: #afb1b8 1px solid;
+		border-radius: 4px;
+
+		fill: #afb1b8;
+
+		transition: all 0.2s ease-in-out;
+	}
+}
