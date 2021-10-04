@@ -1,0 +1,253 @@
+/* Typography main */
+
+// Header
+.site-nav__link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @media screen and(max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+.contact-nav__link {
+  color: var(--primary-text-color);
+  @extend .site-nav__link;
+}
+
+// Hero
+.hero__title {
+  color: var(--white-text-color);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+}
+
+.hero__button {
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+
+// Modal
+.modal__title {
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.form {
+  &__label {
+    color: var(--primary-text-color);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
+
+  &__input {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    &--comment {
+      &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+      }
+    }
+  }
+
+  &__submit-button {
+    color: var(--white-text-color);
+    font-weight: bold;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+  }
+}
+
+.checkbox {
+  &__text {
+    color: var(--primary-text-color);
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+
+    &--link {
+      color: var(--accent-text-color);
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 1199px) {
+      font-size: 12px;
+    }
+  }
+}
+
+// Features
+.features {
+  &__subtitle {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+
+// Works
+.title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+
+  @media screen and(max-width: 767px) {
+    font-size: 28px;
+    line-height: 1.17;
+  }
+}
+
+.works__title {
+  @extend .title;
+}
+
+// Overlay
+.overlay__title {
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
+//Team
+.team {
+  &__title {
+    @extend .title;
+  }
+
+  &__name {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+
+  &__desc {
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+  }
+}
+
+// Clients
+.clients__title {
+  @extend .title;
+}
+
+//Footer
+.adress__text {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  &:first-child {
+    color: var(--white-text-color);
+  }
+}
+
+.social-media__title {
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
+.subscribe {
+  &__title {
+    @extend .social-media__title;
+  }
+
+  &__input {
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.03em;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &__button {
+    color: var(--white-text-color);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    margin-left: 12px;
+  }
+}
+
+// ===================================
+/* Typography portfolio */
+
+// Filter
+.filter {
+  &__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+}
+
+// Works
+.works {
+  &__subtitle {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &__text {
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+  }
+
+  // Overlay
+  &__desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: #ffffff;
+  }
+}
