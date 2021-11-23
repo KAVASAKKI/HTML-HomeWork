@@ -1,18 +1,34 @@
 const refs = {
-	openModalBtn: document.querySelector('[data-open-modal]'),
-	closeModalBtn: document.querySelector('[data-close-modal]'),
-	backdrop: document.querySelector('[data-backdrop]'),
+  openModalBtn: document.querySelector('[data-open-modal]'),
+  closeModalBtn: document.querySelector('[data-close-modal]'),
+  backdrop: document.querySelector('[data-backdrop]'),
 };
+const { openModalBtn, closeModalBtn, backdrop } = refs;
 
-refs.openModalBtn.addEventListener('click', toggleModal);
-refs.closeModalBtn.addEventListener('click', toggleModal);
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);
+backdrop.addEventListener('mousedown', onBackdropClick);
+window.addEventListener('keydown', onKeydown);
 
-refs.backdrop.addEventListener('click', LogBackdropClick);
-
-function toggleModal() {
-	refs.backdrop.classList.toggle('is-hidden');
+function openModal() {
+  backdrop.classList.toggle('is-hidden');
 }
 
-function LogBackdropClick() {
-	console.log('You clicked into the backdrop!!!');
+function closeModal() {
+  backdrop.classList.add('is-hidden');
+}
+
+function onKeydown(e) {
+  const ESC_CODE_BUTTON = 'Escape';
+  const currentKey = e.code;
+
+  if (ESC_CODE_BUTTON === currentKey) {
+    closeModal();
+  }
+}
+
+function onBackdropClick(e) {
+  if (e.target === e.currentTarget) {
+    closeModal();
+  }
 }
